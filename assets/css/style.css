@@ -1,0 +1,299 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'no_biggie_one_boldregular';
+  src: url("../fonts/aerotype_-_no_biggie_one_bold-webfont.woff2") format("woff2"), url("../fonts/aerotype_-_no_biggie_one_bold-webfont.woff") format("woff"), url("../fonts/aerotype_-_no_biggie_one_bold-webfont.ttf") format("truetype"), url("../fonts/aerotype_-_no_biggie_one_bold-webfont.svg#no_biggie_one_boldregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.txt-align-right {
+  text-align: right !important;
+}
+
+.txt-align-left {
+  text-align: left !important;
+}
+
+.txt-align-center {
+  text-align: center !important;
+}
+
+.float-left {
+  float: left !important;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.sc-clearfix {
+  clear: both;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+body {
+  background-color: #d7e894;
+  color: #204631;
+}
+
+.gbMain {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 6px solid #204631;
+}
+
+.gbContainer {
+  align-items: stretch;
+  flex-wrap: nowrap;
+  width: 100%;
+  flex: 1;
+}
+
+.gbHeader {
+  width: 80%;
+  margin: auto;
+}
+
+.gbToolbox {
+  width: 80%;
+  margin: auto;
+}
+
+.gbFooter {
+  align-items: stretch;
+  align-self: flex-end;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.gbHeader {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .gbHeader {
+    width: 100%;
+    padding: 1%;
+  }
+}
+
+.gbHeader_illu {
+  display: inline-block;
+  position: relative;
+  z-index: 5;
+}
+
+.gbHeader_logo {
+  position: relative;
+  z-index: 15;
+  font-size: 50px;
+}
+@media (max-width: 768px) {
+  .gbHeader_logo img {
+    width: 80%;
+  }
+}
+
+.floating {
+  animation-name: floating;
+  -webkit-animation-name: floating;
+  animation-duration: 10s;
+  -webkit-animation-duration: 10s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(100px);
+  }
+  20% {
+    transform: translateY(50px);
+  }
+  80% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(100px);
+  }
+}
+.gbFooter {
+  position: relative;
+  height: 250px;
+}
+
+.gbFooter_bg {
+  position: fixed;
+  height: 250px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: url('../img/cloud-bg.png?1457790084') center top repeat-x;
+}
+
+.has-animated-background {
+  animation-name: cloudanimation;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@media (max-width: 768px) {
+  .has-animated-background {
+    animation-duration: 2s;
+  }
+}
+
+@keyframes cloudanimation {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+.gbToolbox {
+  text-align: center;
+}
+
+.gbToolbox_list {
+  position: relative;
+  width: 500px;
+  margin: auto;
+  background-color: #527f39;
+  padding: 5px;
+}
+@media (max-width: 768px) {
+  .gbToolbox_list {
+    width: 100%;
+  }
+}
+
+.gbToolbox_item {
+  display: inline-block;
+}
+.gbToolbox_item a {
+  color: #d7e894;
+  font-family: "no_biggie_one_boldregular", Helvetica, Arial, "Trebuchet MS", sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+}
+.gbToolbox_item a:hover {
+  color: #204631;
+}
+.gbToolbox_item + .gbToolbox_item:before {
+  content: "";
+  background-color: #d7e894;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  position: relative;
+  top: -3px;
+}
+
+.pixel-border-fix, .pixel-border-fix_1, .pixel-border-fix_2, .pixel-border-fix_3, .pixel-border-fix_4 {
+  width: 4px;
+  height: 4px;
+  background-color: #d7e894;
+  position: absolute;
+}
+
+.pixel-border-fix_1 {
+  top: 0;
+  left: 0;
+}
+
+.pixel-border-fix_2 {
+  top: 0;
+  right: 0;
+}
+
+.pixel-border-fix_3 {
+  bottom: 0;
+  left: 0;
+}
+
+.pixel-border-fix_4 {
+  bottom: 0;
+  right: 0;
+}
